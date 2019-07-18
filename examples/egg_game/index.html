@@ -22,6 +22,12 @@
   <!-- build:js -->
   <script src="https://www.facebook.com/assets.php/en_US/fbinstant.latest.js"></script>
   <!-- endbuild -->
+  <script type="text/javascript" src="js/resource.js"></script>
+  <script type="text/javascript" src="js/bar.js"></script>
+  <script type="text/javascript" src="js/chicken.js"></script>
+  <script type="text/javascript" src="js/bowl.js"></script>
+  <script type="text/javascript" src="js/egg.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
   <script type="text/javascript">
 
     const assets = [
@@ -61,14 +67,21 @@
         console.log(e);
       }
       $('#info-section').show();
+
+      hungTrungStart();
+    }
+
+    function hungTrungStart() {
+        var hungTrung = new game();
+        hungTrung.init();
+        hungTrung.start();
     }
   </script>
 
   <header>
     <h1>Instant Games Demos</h1>
-    <h2>Hello World!</h2>
+    <h2>Game Hung Trung!</h2>
   </header>
-
   <section id="info-section">
     <p>If you can see this, then FBInstant initialized properly and the game has started!</p>
 
@@ -87,12 +100,13 @@
         <th>Context Type</th>
         <td id="context-type"></td>
       </tr>
-      <tr>
-        <th>Entrypoint Data</th>
-        <td id="entrypointdata"></td>
-      </tr>
     </table>
-    <a href="https://oginland.go-stay.net">Go External Site</a>
   </section>
+
+  <style type="text/css">
+    body {
+      background: black;
+    }
+  </style>
 </body>
 </html>
