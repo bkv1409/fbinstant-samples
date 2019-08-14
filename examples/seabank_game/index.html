@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta name="lang" content="vi" />
+    <meta http-equiv="content-language" content="vi" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <title>SeABank</title>
+
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap&subset=vietnamese" rel="stylesheet" />
+    <link href="css/fonts/Kanit-ExtraBoldItalic/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/vendor/jquery.min.js"></script>-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="js/vendor/html5shiv.min.js"></script>
+    <script type="text/javascript" src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+    <!-- End Styles Code -->
+    <!-- build:js -->
+    <script src="https://www.facebook.com/assets.php/en_US/fbinstant.latest.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+<header id="header">
+    <button type="button" class="btnMobile" alt="">
+        <img src="images/icon-menu.png" />
+    </button>
+    <div class="logo text-center">
+        <a href="index.php" alt="SeABank">
+            <img src="images/logo.png" title="SeABank" />
+        </a>
+    </div>
+    <nav id="sidebar">
+        <div class="text-center">
+            <a href="index.php">
+                <img src="images/logo.png" width="100" title="SeABank">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div>
+                <ul>
+                    <li class="active">
+                        <a href="index.php">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="page2.php">
+                            Page 2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="page3.php">
+                            Page 3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="page4.php">
+                            Page 4
+                        </a>
+                    </li>
+                    <li>
+                        <a href="page5.php">
+                            Page 5
+                        </a>
+                    </li>
+                    <li>
+                        <a href="page6.php">
+                            Page 6
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-active-xs" style="display: none;"></div>
+</header>
+
+<!-- .bg-home -->
+<main id="main" class="bg-home">
+</main>
+
+<!-- template init game -->
+<template id="init-game">
+    <h1 class="home-title c_00ebff">
+        <strong>
+            #Đại tiệc chào hè #SeAbank
+        </strong>
+    </h1>
+    <div class="text-center padding-15">
+        <img src="images/home-text.png">
+    </div>
+    <div class="text-center">
+        <img src="images/home-gif.png" class="img-width-75">
+    </div>
+    <div class="text-center home-text-bottom">
+        Không chỉ bật mí vận may,<br/> chơi xong nhận luôn vận may nhé!
+    </div>
+    <div class="text-center padding-15">
+        <a href="#!" class="btn-1 btn-w-75 request-play-ctl" >
+            <b>chơi ngay</b>
+        </a>
+    </div>
+</template>
+
+<!-- template seabank KM chung -->
+<template id="result-seabank">
+    <div class="user-box text-center">
+        <b>
+            điều may mắn
+        </b>
+        <br/>
+        <b class="user-title">
+            sắp đến với <span class="player-name-ctl">trúc</span>
+        </b>
+    </div>
+    <div class="box-content-user">
+        <img src="images/100x100.png">
+    </div>
+    <div class="box-content">
+        <p class="message-result-ctl">
+            Tháng tới, may mắn đường tiệc tùng. Có một đại tiệc tưng bừng đợi bạn, chỉ là bạn có muốn tham gia không thôi. Đi tiệc nhớ rủ crush nhé, người ta sẽ thấy bạn rất chu đáo đấy.
+        </p>
+        <div class="padding-0-15">
+            <p class="text-center">
+                <a href="#!" class="btn-1 extra-promotion-ctl">
+                    <b>xem thêm ưu đãi</b>
+                </a>
+            </p>
+            <div class="flex-button">
+                <div class="flex-left">
+                    <a href="#!" class="btn-2 request-play-ctl">
+                        <b>thử lại</b>
+                    </a>
+                </div>
+                <div class="flex-right">
+                    <a href="#!" class="btn-share">
+                        <b>chia sẻ</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center bottom">
+        <img src="images/seabank.png" class="img-responsive">
+    </div>
+</template>
+
+<!-- tempate grab result -->
+<!-- .bg-2 -->
+<!--<main id="main" class="bg-2">-->
+<template id="result-grab">
+    <div class="user-box text-center">
+        <b>
+            điều may mắn
+        </b>
+        <br/>
+        <b class="user-title">
+            sắp đến với <span class="player-name-ctl">trúc</span>
+        </b>
+    </div>
+    <div class="box-content-user">
+        <img src="images/100x100.png">
+    </div>
+    <div class="box-content">
+        <p class="message-result-ctl">
+            Tháng tới là tháng “số hưởng” trong đi lại của bạn. Bạn hiếm khi phải cầm lái, vì có người đưa rước tận nhà, gọi 5 phút là qua. Đọc đến đây chắc đoán được ai sẽ phải đưa rước rồi nhé!
+        </p>
+        <div class="padding-0-15">
+            <p class="text-center">
+                <a href="#!" class="btn-1 extra-promotion-ctl">
+                    <b>xem thêm ưu đãi</b>
+                </a>
+            </p>
+            <div class="flex-button">
+                <div class="flex-left">
+                    <a href="#!" class="btn-2 request-play-ctl">
+                        <b>thử lại</b>
+                    </a>
+                </div>
+                <div class="flex-right">
+                    <a href="#!" class="btn-share">
+                        <b>chia sẻ</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center bottom">
+        <img src="images/grab.png" class="img-responsive">
+    </div>
+</template>
+
+
+<!-- template shopee -->
+<!--<main id="main" class="bg-3">-->
+<template id="result-shopee">
+    <div class="user-box text-center">
+        <b>
+            điều may mắn
+        </b>
+        <br/>
+        <b class="user-title">
+            sắp đến với <span class="player-name-ctl">trúc</span>
+        </b>
+    </div>
+    <div class="box-content-user">
+        <img src="images/100x100.png">
+    </div>
+    <div class="box-content">
+        <p class="message-result-ctl">
+            Tháng tới là tháng “số hưởng” trong đi lại của bạn. Bạn hiếm khi phải cầm lái, vì có người đưa rước tận nhà, gọi 5 phút là qua. Đọc đến đây chắc đoán được ai sẽ phải đưa rước rồi nhé!
+        </p>
+        <div class="padding-0-15">
+            <p class="text-center">
+                <a href="#!" class="btn-1 extra-promotion-ctl">
+                    <b>xem thêm ưu đãi</b>
+                </a>
+            </p>
+            <div class="flex-button">
+                <div class="flex-left">
+                    <a href="#!" class="btn-2 request-play-ctl">
+                        <b>thử lại</b>
+                    </a>
+                </div>
+                <div class="flex-right">
+                    <a href="#!" class="btn-share">
+                        <b>chia sẻ</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <img src="images/shopee.png" class="img-responsive">
+    </div>
+</template>
+
+<!-- template cgv-->
+<!--<main id="main" class="bg-4">-->
+<template id="result-cgv">
+    <div class="user-box text-center">
+        <b>
+            đại tiệc hè
+        </b>
+        <br/>
+        <b class="user-title">
+            sắp đến với <span class="player-name-ctl">trúc</span>
+        </b>
+    </div>
+    <div class="box-content-user">
+        <img src="images/100x100.png">
+    </div>
+    <div class="box-content">
+        <p class="message-result-ctl">
+            Bạn luôn tìm kiếm một nửa lý tưởng? Tháng này là tháng thần Cupid đấy nhé. Cứ la cà rạp phim, sẽ cua được trai đẹp hoặc gái đẹp, đúng với xu hướng giới tính của mình nhé.
+        </p>
+        <div class="padding-0-15">
+            <p class="text-center">
+                <a href="#!" class="btn-1 extra-promotion-ctl">
+                    <b>xem thêm ưu đãi</b>
+                </a>
+            </p>
+            <div class="flex-button">
+                <div class="flex-left">
+                    <a href="#!" class="btn-2 request-play-ctl">
+                        <b>thử lại</b>
+                    </a>
+                </div>
+                <div class="flex-right">
+                    <a href="#!" class="btn-share">
+                        <b>chia sẻ</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center bottom">
+        <img src="images/cgv.png" class="img-responsive">
+    </div>
+</template>
+
+<!-- template uu dai them -->
+<!--<main id="main" class="bg-5">-->
+<template id="extra-promotion">
+    <div class="user-box text-center">
+        <b>
+            đại tiệc hè
+        </b>
+        <br/>
+        <b class="user-title">
+            dành riêng cho bạn
+        </b>
+    </div>
+    <div class="text-center">
+        <img src="images/visa.png" class="img-width-75">
+    </div>
+    <div class="box-content">
+        <p class="title-final">
+            <strong>
+                Thanh toán trực tuyến bằng<br/> thẻ SeABank để nhận ưu đãi:
+            </strong>
+        </p>
+        <div class="clear">
+            <p>
+                Mua 1 tặng 1 vé xem phim 2D tại CGV
+            </p>
+            <p>
+                Nhập code giảm ngay 25.000đ tại Grab
+            </p>
+            <p>
+                Giảm giá lên đến 500.000đ tại Shopee
+            </p>
+        </div>
+        <div class="padding-0-15">
+            <p class="text-center">
+                <a href="#!" class="btn-share btn-width-auto btn-share-final">
+                    <b>chia sẻ</b>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="text-right-action">
+        <a href="#" class="btn-return init-game-ctl">
+            Quay lại
+        </a>
+    </div>
+    <div class="text-center bottom">
+        <img src="images/dt.png" class="img-responsive">
+    </div>
+</template>
+
+<script type="text/javascript" src="js/configs.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/ResultScreen.js"></script>
+<script type="text/javascript" src="js/Data.js"></script>
+<script type="text/javascript" src="js/Game.js"></script>
+<script type="text/javascript">
+
+    const assets = [
+        'img/asset1.png',
+        'img/asset2.png',
+        'img/asset3.png',
+        'img/asset4.png'
+    ];
+
+    window.onload = function() {
+
+        // When the window loads, start to initialize the SDK
+        FBInstant.initializeAsync().then(function() {
+
+            // We can start to load assets
+            for (let i in assets) {
+                // When preloading assets, make sure to report the progress
+                FBInstant.setLoadingProgress(i / assets.length * 100);
+            }
+
+            // Now that assets are loaded, call startGameAsync
+            FBInstant.startGameAsync().then(onStart);
+        });
+    };
+
+    function onStart() {
+        var name = FBInstant.player.getName();
+        var photo = FBInstant.player.getPhoto();
+
+        var game = new Game(name, photo);
+        console.log(name)
+        console.log(photo)
+        game.init();
+        game.initPlay();
+        game.start();
+    }
+
+
+</script>
+
+</body>
+</html>
