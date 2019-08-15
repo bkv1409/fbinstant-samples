@@ -25,6 +25,7 @@
     <!-- build:js -->
     <script src="https://www.facebook.com/assets.php/en_US/fbinstant.latest.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript" src="js/vendor/html2canvas.min.js"></script>
 
 </head>
 <body>
@@ -148,7 +149,7 @@
             </div>
         </div>
     </div>
-    <div class="text-center bottom">
+    <div class="text-center action">
         <img src="images/seabank.png" class="img-responsive">
     </div>
 </template>
@@ -193,7 +194,7 @@
             </div>
         </div>
     </div>
-    <div class="text-center bottom">
+    <div class="text-center action">
         <img src="images/grab.png" class="img-responsive">
     </div>
 </template>
@@ -238,7 +239,7 @@
             </div>
         </div>
     </div>
-    <div class="text-center">
+    <div class="text-center action">
         <img src="images/shopee.png" class="img-responsive">
     </div>
 </template>
@@ -282,7 +283,7 @@
             </div>
         </div>
     </div>
-    <div class="text-center bottom">
+    <div class="text-center action">
         <img src="images/cgv.png" class="img-responsive">
     </div>
 </template>
@@ -309,13 +310,13 @@
             </strong>
         </p>
         <div class="clear">
-            <p>
+            <p >
                 Mua 1 tặng 1 vé xem phim 2D tại CGV
             </p>
-            <p>
+            <p >
                 Nhập code giảm ngay 25.000đ tại Grab
             </p>
-            <p>
+            <p >
                 Giảm giá lên đến 500.000đ tại Shopee
             </p>
         </div>
@@ -332,7 +333,7 @@
             Quay lại
         </a>
     </div>
-    <div class="text-center bottom">
+    <div class="text-center action">
         <img src="images/dt.png" class="img-responsive">
     </div>
 </template>
@@ -364,16 +365,15 @@
 
             // Now that assets are loaded, call startGameAsync
             FBInstant.startGameAsync().then(onStart);
+
         });
     };
 
     function onStart() {
-        var name = FBInstant.player.getName();
-        var photo = FBInstant.player.getPhoto();
-
-        var game = new Game(name, photo);
-        console.log(name)
-        console.log(photo)
+        // var name = FBInstant.player.getName();
+        // var photo = FBInstant.player.getPhoto();
+        // photo = "https://platform-lookaside.fbsbx.com/platform/instantgames/profile_pic.jpg?igpid=2587715987969845&height=256&width=256&ext=1568424200&hash=AeRada2ahHMhyitO";
+        var game = new Game(FBInstant);
         game.init();
         game.initPlay();
         game.start();

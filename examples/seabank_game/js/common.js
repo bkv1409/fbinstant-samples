@@ -26,8 +26,9 @@ var common = function(){
     this.addClickHandlerToNode = function(className, fn, obj){
         let elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) {
-            elements[i].addEventListener('click',() => {
-                obj[fn]()
+            elements[i].addEventListener('click',(e) => {
+                e.preventDefault();
+                obj[fn]();
             })
         }
     }

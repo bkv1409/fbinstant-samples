@@ -241,10 +241,11 @@ p{
 }
 #main{
     margin: 0 auto;
-    min-height: calc(100vh - 60px);
-    margin-top: 54px;
+    min-height: calc(100vh - 55px);
+    margin-top: 55px;
     padding: 20px 15px 15px;
     color: #fff;
+    position: relative;
 }
 #main.bg-home {
     background: url(../images/bg-home.jpg) top center no-repeat;
@@ -279,7 +280,7 @@ p{
     border: 0;
     background: #fff;
     border-radius: 25px;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     color: #2a2a2a;
     cursor: pointer;
@@ -354,15 +355,15 @@ p{
     font-size: 34px;
 }
 .box-content-user{
- background: url(../images/bg-gifbox.png) top center no-repeat;
- background-size: contain;
- text-align: center;
- /* min-height: 250px; */
- margin-top: -60px;
- position: relative;
- z-index: 1;
- padding: 70px 0 40px;
- z-index: 1;
+   background: url(../images/bg-gifbox.png) top center no-repeat;
+   background-size: contain;
+   text-align: center;
+   /* min-height: 250px; */
+   margin-top: -60px;
+   position: relative;
+   z-index: 1;
+   padding: 70px 0 40px;
+   z-index: 1;
 }
 .box-content-user img{
     border-radius: 50%;
@@ -433,8 +434,23 @@ p{
 }
 
 .bottom {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     bottom: 0;
-    height: 60px;
-    margin-right: 1rem;
+    height: 70px;
+    width: 94%;
+    margin-right: 15px;
+}
+
+.message-result-ctl {
+    padding-bottom: 7px;
+    padding-top: 15px;
+}
+
+.action {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 15px;
+    padding: 0 15px;
 }
