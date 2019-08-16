@@ -77,6 +77,7 @@ var Game = function (FBInstant) {
 //         playerImage.src = FBInstant.player.getPhoto();
 //             imgs.src = this.playerPhoto;
             imgs.src = this.playerPhoto;
+            console.log(this.playerPhoto);
             imgs.onload = function () {
                 console.log('load done')
             }
@@ -100,8 +101,10 @@ var Game = function (FBInstant) {
         const entryPointData = this.FBInstant.getEntryPointData();
         console.log(entryPointData);
         var currentMessage = document.querySelector('.message-result-ctl').textContent;
-
-        html2canvas(document.getElementById('main'),{
+        var main = document.getElementById('main');
+        var img = main.querySelector('.box-content-user > img');
+        console.log(img);
+        html2canvas(main,{
             allowTaint: false,
             logging: false
         }).then(function (canvas) {
