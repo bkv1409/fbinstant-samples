@@ -1,4 +1,3 @@
-
 var Data = function (common, configs) {
     this.source = null;
     this.common = common;
@@ -28,6 +27,3 @@ var Data = function (common, configs) {
         return e;
     }
 }
-
-// export {Bar as default}
-// export default instance;

@@ -373,7 +373,7 @@
         // var name = FBInstant.player.getName();
         // var photo = FBInstant.player.getPhoto();
         // photo = "https://platform-lookaside.fbsbx.com/platform/instantgames/profile_pic.jpg?igpid=2587715987969845&height=256&width=256&ext=1568424200&hash=AeRada2ahHMhyitO";
-        var game = new Game(FBInstant);
+        var game = new Game(FBInstant, html2canvas);
         game.init();
         game.initPlay();
         game.start();

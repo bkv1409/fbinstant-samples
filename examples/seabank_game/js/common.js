@@ -32,4 +32,29 @@ var common = function(){
             })
         }
     }
+
+    this.getBase64Image = function(imgInput, base64only = false) {
+        console.log(imgInput)
+        var canvas = document.createElement("canvas");
+        var img;
+        if (! (imgInput instanceof Image)) {
+            var url = imgInput;
+            img = new Image();
+            img.src = url;
+            console.log(img);
+        } else {
+            img = imgInput;
+        }
+        canvas.width = img.width;
+        canvas.height = img.height;
+        console.log(img.height + '|' + img.width);
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+        var dataURL = canvas.toDataURL("image/png");
+        if (base64only)
+            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        else
+            return dataURL;
+    }
+
 }
