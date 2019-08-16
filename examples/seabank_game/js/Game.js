@@ -128,9 +128,10 @@ var Game = function (FBInstant, html2canvas) {
     }
 
     this.addClickHandler = function(){
-        this.common.addClickHandlerToNode('request-play-ctl', 'renderRandomResult' , this)
-        this.common.addClickHandlerToNode('extra-promotion-ctl', 'goExtraPromotion', this)
+        this.common.addClickHandlerToNode('request-play-ctl', 'renderRandomResult' , this, 300)
+        this.common.addClickHandlerToNode('extra-promotion-ctl', 'goExtraPromotion', this, 300)
         this.common.addClickHandlerToNode('init-game-ctl', 'goInitGame', this)
         this.common.addClickHandlerToNode('btn-share', 'share', this)
     }
+
 }

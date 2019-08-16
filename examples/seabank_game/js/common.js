@@ -24,12 +24,22 @@ var common = function(){
         parent.appendChild(child);
     }
 
-    this.addClickHandlerToNode = function(className, fn, obj){
+    this.addClickHandlerToNode = function(className, fn, obj, delay = 0){
         let elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) {
             elements[i].addEventListener('click',(e) => {
                 e.preventDefault();
-                obj[fn]();
+                this.toggleMarker();
+                if (delay === 0) {
+                    obj[fn]();
+                    this.toggleMarker(false);
+                } else {
+                    var randomDelay = this.randomBetween(delay,Math.round(delay/2));
+                    setTimeout(() => {
+                        obj[fn]();
+                        this.toggleMarker(false);
+                    }, randomDelay);
+                }
             })
         }
     }
@@ -57,6 +67,20 @@ var common = function(){
             return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
         else
             return dataURL;
+    }
+
+    this.toggleMarker = function (show = true) {
+        console.log(show + 'show')
+        var yourUl = document.getElementById("cover-spin");
+        console.log(yourUl);
+        if (show)
+            yourUl.style.display = 'block';
+        else
+            yourUl.style.display = 'none';
+    }
+
+    this.randomBetween = function(max, min) {
+        return parseInt((Math.random() * (max - min + 1)), 10) + min;
     }
 
 }
