@@ -30,15 +30,15 @@ var configs = function () {
     }
 
     this.bgImg = {
-        GRAB: 'bg-2',
-        SHOPEE: 'bg-3',
-        CGV: 'bg-4',
-        SEABANK: 'bg-home',
+        GRAB: 'bg-2 transaction-ease',
+        SHOPEE: 'bg-3 transaction-ease',
+        CGV: 'bg-4 transaction-ease',
+        SEABANK: 'bg-home transaction-ease',
     }
 
     this.bgImgExtra = {
-        INIT_GAME: 'bg-home',
-        EXTRA_PROMOTION: 'bg-5',
+        INIT_GAME: 'bg-home transaction-ease',
+        EXTRA_PROMOTION: 'bg-5 transaction-ease',
     }
 }
 

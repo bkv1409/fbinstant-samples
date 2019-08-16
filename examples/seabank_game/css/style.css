@@ -271,7 +271,8 @@ p{
     font-size: 16px;
 }
 .home-text-bottom{
-    margin-top: -15px;
+    /*margin-top: -15px;*/
+    margin-top: -30px;
 }
 .btn-1{
     display: inline-block;
@@ -383,6 +384,7 @@ p{
     text-align: justify;
     border-radius: 25px;
 }
+
 .bg-2 .box-content{
     background: url(../images/bg-box-2.png) top center no-repeat;
     background-size: 100% 100%;
@@ -456,3 +458,41 @@ p{
     bottom: 15px;
     padding: 0 15px;
 }
+
+.padding-custom {
+    padding: 25px 15px 15px 15px;
+}
+
+.transaction-ease {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    -ms-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+/* font size chang for iphone 5*/
+@media screen and (device-aspect-ratio: 40/71) {
+    .box-content {
+        font-size: 14px;
+        padding: 35px 15px 15px 15px;
+    }
+    .message-result-ctl {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .action {
+        bottom: 7px;
+    }
+    p{
+        margin: 0 0 10px 0;
+    }
+}
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 568px) {*/
+    /*!* STYLES GO HERE *!*/
+    /*.box-content {*/
+        /*font-size: 14px;*/
+    /*}*/
+/*}*/

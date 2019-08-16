@@ -5,6 +5,7 @@ var common = function(){
         return keys[Math.floor(Math.random() * keys.length)];
     }
 
+    // random element  for array
     this.getRandomKeyArray = function(collection) {
         return collection[Math.floor(Math.random()*collection.length)];
     }
@@ -33,6 +34,7 @@ var common = function(){
         }
     }
 
+    // not used
     this.getBase64Image = function(imgInput, base64only = false) {
         console.log(imgInput)
         var canvas = document.createElement("canvas");
