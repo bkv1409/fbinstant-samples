@@ -2,7 +2,7 @@ var Game = function (FBInstant, html2canvas) {
     this.playerName = FBInstant.player.getName();
     this.playerPhoto = FBInstant.player.getPhoto();
     // fix code test
-    this.playerPhoto = "https://platform-lookaside.fbsbx.com/platform/instantgames/profile_pic.jpg?igpid=2587715987969845&height=256&width=256&ext=1568424200&hash=AeRada2ahHMhyitO";
+    // this.playerPhoto = "https://platform-lookaside.fbsbx.com/platform/instantgames/profile_pic.jpg?igpid=2587715987969845&height=256&width=256&ext=1568424200&hash=AeRada2ahHMhyitO";
 
     // this.FBInstant = FBInstant;
     // this.html2canvas = html2canvas;
