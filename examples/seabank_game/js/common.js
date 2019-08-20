@@ -24,7 +24,7 @@ var common = function(){
         parent.appendChild(child);
     }
 
-    this.addClickHandlerToNode = function(className, fn, obj, delay = 0){
+    this.addClickHandlerToNode = function(className, fn, obj, delay = 0, noDisableToggle = false){
         let elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) {
             elements[i].addEventListener('click',(e) => {
@@ -37,7 +37,7 @@ var common = function(){
                     var randomDelay = this.randomBetween(delay,Math.round(delay/2));
                     setTimeout(() => {
                         obj[fn]();
-                        this.toggleMarker(false);
+                        if (!noDisableToggle) this.toggleMarker(false);
                     }, randomDelay);
                 }
             })

@@ -112,7 +112,7 @@ var Game = function (FBInstant, html2canvas) {
             useCORS: true,
         }).then(function (canvas) {
             // var imgageData = canvas.toDataURL("image/png");
-            var imgageData = canvas.toDataURL('image/jpeg', 0.5);
+            var imgageData = canvas.toDataURL('image/jpeg', 0.8);
 
             FBInstant.shareAsync({
                 intent: 'REQUEST',
@@ -121,6 +121,7 @@ var Game = function (FBInstant, html2canvas) {
                 data: {myReplayData: '...'},
             }).then(function() {
                 console.log('done share');
+                this.common.toggleMarker(false);
             }.bind(this));
         }.bind(this))
 
@@ -131,7 +132,7 @@ var Game = function (FBInstant, html2canvas) {
         this.common.addClickHandlerToNode('request-play-ctl', 'renderRandomResult' , this, 300)
         this.common.addClickHandlerToNode('extra-promotion-ctl', 'goExtraPromotion', this, 300)
         this.common.addClickHandlerToNode('init-game-ctl', 'goInitGame', this)
-        this.common.addClickHandlerToNode('btn-share', 'share', this)
+        this.common.addClickHandlerToNode('btn-share', 'share', this, 200, true)
     }
 
 }
