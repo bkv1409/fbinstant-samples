@@ -111,8 +111,8 @@ var Game = function (FBInstant, html2canvas) {
             logging: false,
             useCORS: true,
         }).then(function (canvas) {
-            // var imgageData = canvas.toDataURL("image/png");
-            var imgageData = canvas.toDataURL('image/jpeg', 0.8);
+            var imgageData = canvas.toDataURL("image/png");
+            // var imgageData = canvas.toDataURL('image/jpeg', 0.8);
 
             FBInstant.shareAsync({
                 intent: 'REQUEST',
