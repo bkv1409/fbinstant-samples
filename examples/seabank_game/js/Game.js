@@ -80,7 +80,7 @@ var Game = function (FBInstant, html2canvas) {
             img.src = this.playerPhoto;
             // console.log(this.playerPhoto);
             img.onload = function () {
-                console.log('load done')
+                // console.log('load done')
             }
             img.onerror = function (err) {
                 console.log(err)
@@ -120,7 +120,7 @@ var Game = function (FBInstant, html2canvas) {
                 text: currentMessage,
                 data: {myReplayData: '...'},
             }).then(function() {
-                console.log('done share');
+                // console.log('done share');
                 this.common.toggleMarker(false);
             }.bind(this));
         }.bind(this))

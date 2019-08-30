@@ -70,9 +70,9 @@ var common = function(){
     }
 
     this.toggleMarker = function (show = true) {
-        console.log(show + 'show')
+        // console.log(show + 'show')
         var yourUl = document.getElementById("cover-spin");
-        console.log(yourUl);
+        // console.log(yourUl);
         if (show)
             yourUl.style.display = 'block';
         else
